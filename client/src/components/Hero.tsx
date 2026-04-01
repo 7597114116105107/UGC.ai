@@ -5,25 +5,25 @@ import { motion } from 'framer-motion';
 export default function Hero() {
 
     const trustedUserImages = [
-        'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
-        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
+        'https://images.unsplash.com/photo-1669791332100-f06dee9d1bb1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGElMjBpbmRpYW4lMjBidXNpbmVzc21lbiUyMGltYWdlcyUyMHdpdGglMjBzbWFsJTIwdXJsfGVufDB8fDB8fHww',
+        'https://images.unsplash.com/photo-1650398119395-39c4248cfca0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGElMjBpbmRpYW4lMjBidXNpbmVzc21lbiUyMGltYWdlcyUyMHdpdGglMjBzbWFsJTIwdXJsfGVufDB8fDB8fHww',
+        'https://plus.unsplash.com/premium_photo-1723874466229-85b730bb1f5a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YSUyMGluZGlhbiUyMGJ1c2luZXNzbWVuJTIwaW1hZ2VzJTIwd2l0aCUyMHNtYWwlMjB1cmx8ZW58MHx8MHx8fDA%3D'
     ];
 
-    const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
+    const mainImageUrl = 'https://media.istockphoto.com/id/2257382326/photo/ai-powered-digital-marketing-and-advertising-strategy-showing-a-robot-interacting-with-a.webp?a=1&b=1&s=612x612&w=0&k=20&c=7sC8fQDYzAf8qAgpEw1EUyIR68du1lj2FvZYBuoCIpo=';
 
     const galleryStripImages = [
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
+        'https://plus.unsplash.com/premium_photo-1725907643623-f0f2fea6ff17?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=100',
         'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=100',
     ];
 
     const trustedLogosText = [
-        'Startups',
-        'Scale-ups',
-        'Founders',
-        'Global teams',
-        'Creative brands'
+        'Adobe',
+        'Figma',
+        'Canva',
+        'Shopify',
+        'Webflow',
     ];
 
     return (
@@ -51,7 +51,7 @@ export default function Hero() {
                                     ))}
                                 </div>
                                 <span className="text-xs text-gray-200/90">
-                                    Trusted by 10,000+ creators
+                                Trusted by 10k+ creators
                                 </span>
                             </motion.a>
 
@@ -141,13 +141,13 @@ export default function Hero() {
                                     />
 
                                     <div className="absolute left-4 top-4 px-3 py-1 rounded-full bg-black/15 backdrop-blur-sm text-xs">
-                                        Branding • Web • Growth
+                                        Social-ready . 9:16 & 16:9
                                     </div>
 
                                     <div className="absolute right-4 bottom-4">
                                         <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
                                             <PlayIcon className="size-4" />
-                                            <span className="text-xs">See case study</span>
+                                            <span className="text-xs">Preview</span>
                                         </button>
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@ export default function Hero() {
 
                                         <span className="relative inline-flex size-2 rounded-full bg-green-600" />
                                     </div>
-                                    20+ completed projects
+                                    +20 more
                                 </motion.div>
                             </div>
                         </motion.div>
