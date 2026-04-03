@@ -29,6 +29,6 @@ export interface Project {
     error?: string;
     createdAt: Date | string;
     updateAt?: Date | string;
-    uploadImages: string[];
+    uploadedImages: string[];
     
 }
