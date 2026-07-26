@@ -4,7 +4,7 @@ import { useState } from "react";
 import { EllipsisIcon, ImageIcon, Loader2Icon, PlaySquareIcon, Share2Icon, Trash2Icon } from "lucide-react";
 import { GhostButton, PrimaryButton } from "./Buttons";
 
-const ProjectCard = ({gen, setGenerations, forCommunity = false} : {gen: Project, setGenerations: React.Dispatch<React.SetStateAction<Project[]>>, forCommunity?: boolean}) => {
+const ProjectCard = ({gen, setGenerations, forCommunity = false} : {gen: Project, setGenerations?: React.Dispatch<React.SetStateAction<Project[]>>, forCommunity?: boolean}) => {
 
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +12,9 @@ const ProjectCard = ({gen, setGenerations, forCommunity = false} : {gen: Project
     const handleDelete = async (id: string)=>{
       const confirm = window.confirm('Are you sure you want to delete this card?');
       if(!confirm) return;
-      console.log(id)
+      if (setGenerations) {
+        setGenerations(prev => prev.filter(project => project.id !== id));
+      }
     }
 
     const togglePublish = async (projectId: string)=>{

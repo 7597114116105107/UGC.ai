@@ -1,11 +1,30 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
-import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { ClerkProvider } from '@clerk/clerk-react'
+import { dark } from '@clerk/themes'
+
+// Import your publishable key
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+    throw new Error('Missing Publishable Key')
+}
+
 
 createRoot(document.getElementById('root')! as HTMLElement).render(
+    <ClerkProvider  
+    appearance={{
+        theme: dark,
+        variables: {
+            colorPrimary: '#df39f6',
+            colorTextOnPrimaryBackground: "#ffffff"
+        }
+    }} 
+    publishableKey={PUBLISHABLE_KEY}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
+    </ClerkProvider>
 )

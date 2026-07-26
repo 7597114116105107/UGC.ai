@@ -1,4 +1,4 @@
-import { Contact, Loader2Icon, RectangleHorizontal, RectangleVerticalIcon, Wand2Icon } from "lucide-react"
+import { Loader2Icon, RectangleHorizontal, RectangleVerticalIcon, Wand2Icon } from "lucide-react"
 import Title from "../components/Title"
 import UploadZone from "../components/UploadZone"
 import React, { useState } from "react"
@@ -14,7 +14,7 @@ const Generator = () => {
   const [productImage, setProductImage] = useState<File | null>(null)
   const [modelImage, setModelImage] = useState<File | null>(null)
   const [userPrompt, setUserPrompt] = useState('')
-  const [isgenerating, setIsGenerating] = useState(false)
+  const [isGenerating] = useState(false)
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'product' | 'model') => {
     if(e.target.files && e.target.files[0]) {
@@ -82,8 +82,8 @@ const Generator = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <PrimaryButton disabled={isgenerating} className="px-10 py-3 rounded-md disabled:opacity-70 disabled:cursor-not-allowed">
-            {isgenerating ? (
+          <PrimaryButton disabled={isGenerating} className="px-10 py-3 rounded-md disabled:opacity-70 disabled:cursor-not-allowed">
+            {isGenerating ? (
               <>
               <Loader2Icon className="size-5 animate-spin"/> Generating...
               </>
